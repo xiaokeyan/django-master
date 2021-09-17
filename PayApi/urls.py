@@ -33,7 +33,7 @@ router.register('CreateClienteleInfoAPiView', CreateClienteleInfoAPiView, basena
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('auth_url', include('rest_framework.urls')),
+    path('auth_url/', include('rest_framework.urls')),
     re_path(r'media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
     url(r'^login/', obtain_jwt_token),
     url('upload_image', upload_imag),
